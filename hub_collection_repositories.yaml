@@ -1,0 +1,63 @@
+---
+hub_collection_repositories:
+  - prn: prn:ansible.ansibledistribution:019efe15-f992-73c2-a11b-5a07f1aff86b
+    base_path: validated
+    content_guard: /api/galaxy/pulp/api/v3/contentguards/core/content_redirect/019efe15-f164-7157-ab31-179d6b9a18a4/
+    no_content_change_since: ""
+    hidden: ""
+    pulp_labels: ""
+    name: validated
+    repository: /api/galaxy/pulp/api/v3/repositories/ansible/ansible/019efe15-f987-7116-8167-1e49f1abf475/
+    client_url: https://ec2-98-91-188-87.compute-1.amazonaws.com/pulp_ansible/galaxy/validated/
+    repository_version: ""
+  - prn: prn:ansible.ansibledistribution:019efe15-ec77-7e88-85a2-36cf5a198d84
+    base_path: rh-certified
+    content_guard: /api/galaxy/pulp/api/v3/contentguards/core/content_redirect/019efe15-f164-7157-ab31-179d6b9a18a4/
+    no_content_change_since: ""
+    hidden: ""
+    pulp_labels: ""
+    name: rh-certified
+    repository: /api/galaxy/pulp/api/v3/repositories/ansible/ansible/019efe15-ec6d-746e-ace9-85094894a705/
+    client_url: https://ec2-98-91-188-87.compute-1.amazonaws.com/pulp_ansible/galaxy/rh-certified/
+    repository_version: ""
+  - prn: prn:ansible.ansibledistribution:019efe15-ec5d-7cd3-8a1a-b27c1d9ae72f
+    base_path: community
+    content_guard: /api/galaxy/pulp/api/v3/contentguards/core/content_redirect/019efe15-f164-7157-ab31-179d6b9a18a4/
+    no_content_change_since: ""
+    hidden: ""
+    pulp_labels: ""
+    name: community
+    repository: /api/galaxy/pulp/api/v3/repositories/ansible/ansible/019efe15-ec54-72ec-ac2d-a3eb4026b2e6/
+    client_url: https://ec2-98-91-188-87.compute-1.amazonaws.com/pulp_ansible/galaxy/community/
+    repository_version: ""
+  - prn: prn:ansible.ansibledistribution:019efe15-ec42-7507-a709-560e15cb8dbc
+    base_path: published
+    content_guard: /api/galaxy/pulp/api/v3/contentguards/core/content_redirect/019efe15-f164-7157-ab31-179d6b9a18a4/
+    no_content_change_since: ""
+    hidden: ""
+    pulp_labels: ""
+    name: published
+    repository: /api/galaxy/pulp/api/v3/repositories/ansible/ansible/019efe15-ec36-7c2c-a941-79a50e471629/
+    client_url: https://ec2-98-91-188-87.compute-1.amazonaws.com/pulp_ansible/galaxy/published/
+    repository_version: ""
+  - prn: prn:ansible.ansibledistribution:019efe15-e82c-766a-a2cf-ac3da1f2a430
+    base_path: rejected
+    content_guard: /api/galaxy/pulp/api/v3/contentguards/core/content_redirect/019efe15-f164-7157-ab31-179d6b9a18a4/
+    no_content_change_since: ""
+    hidden: ""
+    pulp_labels: ""
+    name: rejected
+    repository: /api/galaxy/pulp/api/v3/repositories/ansible/ansible/019efe15-e827-7eeb-bb40-4f04bf08d645/
+    client_url: https://ec2-98-91-188-87.compute-1.amazonaws.com/pulp_ansible/galaxy/rejected/
+    repository_version: ""
+  - prn: prn:ansible.ansibledistribution:019efe15-e81f-7ea7-990b-6ac449671bca
+    base_path: staging
+    content_guard: /api/galaxy/pulp/api/v3/contentguards/core/content_redirect/019efe15-f164-7157-ab31-179d6b9a18a4/
+    no_content_change_since: ""
+    hidden: ""
+    pulp_labels: ""
+    name: staging
+    repository: /api/galaxy/pulp/api/v3/repositories/ansible/ansible/019efe15-e819-7d44-8544-83144bce6776/
+    client_url: https://ec2-98-91-188-87.compute-1.amazonaws.com/pulp_ansible/galaxy/staging/
+    repository_version: ""
+...
