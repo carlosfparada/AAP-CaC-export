@@ -1,0 +1,165 @@
+---
+controller_workflows:
+  - name: "AWS AIOps: Workflow"
+    description: |-
+      {%- raw -%}
+      AWS AIOps: Workflow
+      {%- endraw -%}
+    organization: "Default"
+    simplified_workflow_nodes:
+      - identifier: "AIOps Deploy"
+        workflow_job_template: "AWS AIOps: Workflow"
+        unified_job_template: "AWS AIOps: 1. Deploy"
+        limit: ""
+        organization: "Default"
+        all_parents_must_converge: "False"
+        always_nodes:
+          - "AIOps Setup"
+      - identifier: "AIOps Setup"
+        workflow_job_template: "AWS AIOps: Workflow"
+        unified_job_template: "AWS AIOps: 2. Setup"
+        limit: ""
+        organization: "Default"
+        all_parents_must_converge: "False"
+        always_nodes:
+          - "AIOps CVE Event"
+      - identifier: "AIOps CVE Event"
+        workflow_job_template: "AWS AIOps: Workflow"
+        unified_job_template: "AWS AIOps: 3. CVE Event"
+        limit: ""
+        organization: "Default"
+        all_parents_must_converge: "False"
+        always_nodes:
+          - "AIOps Unsetup"
+      - identifier: "AIOps Unsetup"
+        workflow_job_template: "AWS AIOps: Workflow"
+        unified_job_template: "AWS AIOps: 4. Unsetup"
+        limit: ""
+        organization: "Default"
+        all_parents_must_converge: "False"
+        always_nodes:
+          - "AIOps Undeploy"
+      - identifier: "AIOps Undeploy"
+        workflow_job_template: "AWS AIOps: Workflow"
+        unified_job_template: "AWS AIOps: 5. Undeploy"
+        limit: ""
+        organization: "Default"
+        all_parents_must_converge: "False"
+    ask_variables_on_launch: "False"
+    allow_simultaneous: "False"
+    scm_branch: ""
+    limit: ""
+    ask_limit_on_launch: false
+    ask_inventory_on_launch: false
+    webhook_service: ""
+    extra_vars: ""
+    survey_enabled: false
+  - name: "AWS Fortinet: Workflow FortiGate"
+    description: |-
+      {%- raw -%}
+      AWS Fortinet: Workflow FortiGate
+      {%- endraw -%}
+    organization: "Default"
+    simplified_workflow_nodes:
+      - identifier: "AWS Deploy"
+        workflow_job_template: "AWS Fortinet: Workflow FortiGate"
+        unified_job_template: "AWS Fortinet: 1. AWS Deploy"
+        limit: ""
+        organization: "Default"
+        all_parents_must_converge: "False"
+        always_nodes:
+          - "FortiGate Configs"
+      - identifier: "FortiGate Configs"
+        workflow_job_template: "AWS Fortinet: Workflow FortiGate"
+        unified_job_template: "AWS Fortinet: 2. FortiGate"
+        limit: ""
+        organization: "Default"
+        all_parents_must_converge: "False"
+        always_nodes:
+          - "FortiGate Create Rules"
+      - identifier: "FortiGate Create Rules"
+        workflow_job_template: "AWS Fortinet: Workflow FortiGate"
+        unified_job_template: "AWS Fortinet: 5. FortiGate Create Rules Day2"
+        limit: ""
+        organization: "Default"
+        all_parents_must_converge: "False"
+        always_nodes:
+          - "AWS Undeploy"
+      - identifier: "AWS Undeploy"
+        workflow_job_template: "AWS Fortinet: Workflow FortiGate"
+        unified_job_template: "AWS Fortinet: 6. AWS Undeploy"
+        limit: ""
+        organization: "Default"
+        all_parents_must_converge: "False"
+    ask_variables_on_launch: "False"
+    allow_simultaneous: "False"
+    scm_branch: ""
+    limit: ""
+    ask_limit_on_launch: false
+    ask_inventory_on_launch: false
+    webhook_service: ""
+    extra_vars: ""
+    survey_enabled: false
+  - name: "AWS Fortinet: Workflow FortiGate/FortiAnalyzer/FortiManager"
+    description: |-
+      {%- raw -%}
+      AWS Fortinet: Workflow FortiGate/FortiAnalyzer/FortiManager
+      {%- endraw -%}
+    organization: "Default"
+    simplified_workflow_nodes:
+      - identifier: "AWS Deploy"
+        workflow_job_template: "AWS Fortinet: Workflow FortiGate/FortiAnalyzer/FortiManager"
+        unified_job_template: "AWS Fortinet: 1. AWS Deploy"
+        limit: ""
+        organization: "Default"
+        all_parents_must_converge: "False"
+        always_nodes:
+          - "FortiGate Configs"
+      - identifier: "FortiGate Configs"
+        workflow_job_template: "AWS Fortinet: Workflow FortiGate/FortiAnalyzer/FortiManager"
+        unified_job_template: "AWS Fortinet: 2. FortiGate"
+        limit: ""
+        organization: "Default"
+        all_parents_must_converge: "False"
+        always_nodes:
+          - "FortiAnalyzer Configs"
+      - identifier: "FortiAnalyzer Configs"
+        workflow_job_template: "AWS Fortinet: Workflow FortiGate/FortiAnalyzer/FortiManager"
+        unified_job_template: "AWS Fortinet: 3. FortiAnalyzer"
+        limit: ""
+        organization: "Default"
+        all_parents_must_converge: "False"
+        always_nodes:
+          - "FortiManager Configs"
+      - identifier: "FortiManager Configs"
+        workflow_job_template: "AWS Fortinet: Workflow FortiGate/FortiAnalyzer/FortiManager"
+        unified_job_template: "AWS Fortinet: 4. FortiManager"
+        limit: ""
+        organization: "Default"
+        all_parents_must_converge: "False"
+        always_nodes:
+          - "FortiGate Create Rules"
+      - identifier: "FortiGate Create Rules"
+        workflow_job_template: "AWS Fortinet: Workflow FortiGate/FortiAnalyzer/FortiManager"
+        unified_job_template: "AWS Fortinet: 5. FortiGate Create Rules Day2"
+        limit: ""
+        organization: "Default"
+        all_parents_must_converge: "False"
+        always_nodes:
+          - "AWS Undeploy"
+      - identifier: "AWS Undeploy"
+        workflow_job_template: "AWS Fortinet: Workflow FortiGate/FortiAnalyzer/FortiManager"
+        unified_job_template: "AWS Fortinet: 6. AWS Undeploy"
+        limit: ""
+        organization: "Default"
+        all_parents_must_converge: "False"
+    ask_variables_on_launch: "False"
+    allow_simultaneous: "False"
+    scm_branch: ""
+    limit: ""
+    ask_limit_on_launch: false
+    ask_inventory_on_launch: false
+    webhook_service: ""
+    extra_vars: ""
+    survey_enabled: false
+...

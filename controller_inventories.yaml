@@ -1,0 +1,24 @@
+---
+controller_inventories:
+  - name: "Demo Inventory"
+    organization: "Default"
+    prevent_instance_group_fallback: false
+  - name: "Deploy Demos Inventory"
+    description: |-
+      {%- raw -%}
+      Deploy Demos Inventory
+      {%- endraw -%}
+    organization: "Default"
+    prevent_instance_group_fallback: false
+    variables:
+      name: demos
+  - name: "AWS Inventory"
+    description: |-
+      {%- raw -%}
+      AWS Inventory
+      {%- endraw -%}
+    organization: "Default"
+    prevent_instance_group_fallback: false
+    variables:
+      name: aws
+...

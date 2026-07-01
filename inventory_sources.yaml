@@ -1,0 +1,18 @@
+---
+controller_inventory_sources:
+  - name: "AWS Inventory Source"
+    description: |-
+      {%- raw -%}
+      AWS Inventory Source
+      {%- endraw -%}
+    organization: "Default"
+    source: "ec2"
+    limit: ""
+    source_path: ""
+    source_vars:
+      name: sources
+    inventory: "AWS Inventory"
+    update_on_launch: "True"
+    overwrite: "True"
+    credential: "AWS Credential"
+...

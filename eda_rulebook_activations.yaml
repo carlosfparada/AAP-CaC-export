@@ -1,0 +1,10 @@
+---
+eda_rulebook_activations:
+  - name: "AWS AIOps: Lightspeed (Insights)"
+    description: "AWS AIOps: Lightspeed (Insights)"
+    status: "stopped"
+    rulebook: "lightspeed_rulebook.yml"
+    organization_name: "Default"
+    project_name: "AWS EDA Paloalto Project"
+    decision_environment: "Default Decision Environment"
+...

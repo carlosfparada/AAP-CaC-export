@@ -1,0 +1,15 @@
+---
+eda_projects:
+  - name: "AWS EDA Paloalto Project"
+    description: "AWS EDA Paloalto Project"
+    organization: "1"
+    scm_type: "git"
+    scm_branch: ""
+    scm_refspec: ""
+  - name: "AWS AIOps Project"
+    description: "AWS AIOps Project"
+    organization: "1"
+    scm_type: "git"
+    scm_branch: ""
+    scm_refspec: ""
+...
