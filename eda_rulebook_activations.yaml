@@ -1,0 +1,11 @@
+---
+eda_rulebook_activations:
+  - name: "AWS AIOps: Lightspeed (Insights)"
+    description: "AWS AIOps: Lightspeed (Insights)"
+    is_enabled: "True"
+    status: "running"
+    rulebook: "lightspeed_rulebook.yml"
+    organization_name: "Default"
+    project_name: "AWS AIOps Project"
+    decision_environment: "Default Decision Environment"
+...

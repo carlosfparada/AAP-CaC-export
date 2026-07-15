@@ -1,0 +1,45 @@
+---
+hub_ee_repositories:
+  - no_content_change_since: ""
+    repository: /api/galaxy/pulp/api/v3/repositories/container/container-push/019f64ee-2a4b-7fec-b7c5-db56eaf67d33/
+    prn: prn:container.containerdistribution:019f64ee-2ad8-73d4-862b-c46849bf7abc
+    content_guard: /api/galaxy/pulp/api/v3/contentguards/core/content_redirect/019f64ec-c269-78e5-be5c-38c745df4f06/
+    hidden: ""
+    name: de-supported-rhel9
+    pulp_labels: ""
+    base_path: de-supported-rhel9
+    repository_version: ""
+    registry_path: ec2-52-87-211-157.compute-1.amazonaws.com/de-supported-rhel9
+    remote: ""
+    namespace: /api/galaxy/pulp/api/v3/pulp_container/namespaces/019f64ee-2a75-7bea-ad60-31609dc401a0/
+    private: ""
+    description: ""
+  - no_content_change_since: ""
+    repository: /api/galaxy/pulp/api/v3/repositories/container/container-push/019f64ed-5061-79e6-a210-3cbb0cb58d4e/
+    prn: prn:container.containerdistribution:019f64ed-50f8-708b-ba69-ea9530e1b82a
+    content_guard: /api/galaxy/pulp/api/v3/contentguards/core/content_redirect/019f64ec-c269-78e5-be5c-38c745df4f06/
+    hidden: ""
+    name: ee-supported-rhel9
+    pulp_labels: ""
+    base_path: ee-supported-rhel9
+    repository_version: ""
+    registry_path: ec2-52-87-211-157.compute-1.amazonaws.com/ee-supported-rhel9
+    remote: ""
+    namespace: /api/galaxy/pulp/api/v3/pulp_container/namespaces/019f64ed-5090-74b1-b7a8-ab145513a0d2/
+    private: ""
+    description: ""
+  - no_content_change_since: ""
+    repository: /api/galaxy/pulp/api/v3/repositories/container/container-push/019f64ec-c241-7ebf-aa7b-e71f32015898/
+    prn: prn:container.containerdistribution:019f64ec-c2e8-76ac-aa58-0a8fdbed32b5
+    content_guard: /api/galaxy/pulp/api/v3/contentguards/core/content_redirect/019f64ec-c269-78e5-be5c-38c745df4f06/
+    hidden: ""
+    name: ee-minimal-rhel9
+    pulp_labels: ""
+    base_path: ee-minimal-rhel9
+    repository_version: ""
+    registry_path: ec2-52-87-211-157.compute-1.amazonaws.com/ee-minimal-rhel9
+    remote: ""
+    namespace: /api/galaxy/pulp/api/v3/pulp_container/namespaces/019f64ec-c281-7135-b1f0-c2c2236bee62/
+    private: ""
+    description: ""
+...
