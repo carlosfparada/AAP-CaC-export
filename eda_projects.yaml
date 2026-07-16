@@ -1,9 +1,0 @@
----
-eda_projects:
-  - name: "AWS AIOps Project"
-    description: "AWS AIOps Project"
-    organization: "1"
-    scm_type: "git"
-    scm_branch: ""
-    scm_refspec: ""
-...
