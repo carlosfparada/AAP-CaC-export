@@ -1,0 +1,135 @@
+---
+controller_workflows:
+  - name: "AWS AIOps: FIX & MITIGATION Workflow"
+    description: |-
+      {%- raw -%}
+      AWS AIOps: FIX & MITIGATION Workflow
+      {%- endraw -%}
+    organization: "Default"
+    simplified_workflow_nodes:
+      - identifier: "Check CVE Affected Systems"
+        workflow_job_template: "AWS AIOps: FIX & MITIGATION Workflow"
+        unified_job_template: "AWS AIOps: Check CVE Affected Systems"
+        limit: ""
+        organization: "Default"
+        all_parents_must_converge: "False"
+        success_nodes:
+          - "Check CVE Details"
+      - identifier: "Check CVE Details"
+        workflow_job_template: "AWS AIOps: FIX & MITIGATION Workflow"
+        unified_job_template: "AWS AIOps: Check CVE Details"
+        limit: ""
+        organization: "Default"
+        all_parents_must_converge: "False"
+        success_nodes:
+          - "Get CVE Fix"
+        failure_nodes:
+          - "Get CVE AI Mitigation"
+      - identifier: "Get CVE AI Mitigation"
+        workflow_job_template: "AWS AIOps: FIX & MITIGATION Workflow"
+        unified_job_template: "AWS AIOps: Get CVE AI Mitigation"
+        limit: ""
+        organization: "Default"
+        all_parents_must_converge: "False"
+        success_nodes:
+          - "Store Git Mitigation"
+      - identifier: "Store Git Mitigation"
+        workflow_job_template: "AWS AIOps: FIX & MITIGATION Workflow"
+        unified_job_template: "AWS AIOps: Store Git Mitigation"
+        limit: ""
+        organization: "Default"
+        all_parents_must_converge: "False"
+        success_nodes:
+          - "Sync Project Mitigation"
+      - identifier: "Sync Project Mitigation"
+        workflow_job_template: "AWS AIOps: FIX & MITIGATION Workflow"
+        unified_job_template: "AWS AIOps Fix Project"
+        limit: ""
+        organization: "Default"
+        all_parents_must_converge: "False"
+        success_nodes:
+          - "Check Mitigation"
+      - identifier: "Approval Mitigation"
+        workflow_job_template: "AWS AIOps: FIX & MITIGATION Workflow"
+        approval_node:
+          description: "Approve or not proposed Mitigation"
+          name: "Mitigation Approval"
+          timeout: 300
+        limit: ""
+        organization: "Default"
+        all_parents_must_converge: "False"
+        success_nodes:
+          - "Run Mitigation"
+      - identifier: "Check Mitigation"
+        workflow_job_template: "AWS AIOps: FIX & MITIGATION Workflow"
+        unified_job_template: "AWS AIOps: Check Mitigation"
+        limit: ""
+        organization: "Default"
+        all_parents_must_converge: "False"
+        always_nodes:
+          - "Approval Mitigation"
+      - identifier: "Get CVE Fix"
+        workflow_job_template: "AWS AIOps: FIX & MITIGATION Workflow"
+        unified_job_template: "AWS AIOps: Get CVE Fix"
+        limit: ""
+        organization: "Default"
+        all_parents_must_converge: "False"
+        success_nodes:
+          - "Store Git Fix"
+      - identifier: "Run Mitigation"
+        workflow_job_template: "AWS AIOps: FIX & MITIGATION Workflow"
+        unified_job_template: "AWS AIOps: Run Mitigation"
+        limit: ""
+        organization: "Default"
+        all_parents_must_converge: "False"
+      - identifier: "Store Git Fix"
+        workflow_job_template: "AWS AIOps: FIX & MITIGATION Workflow"
+        unified_job_template: "AWS AIOps: Store Git Fix"
+        limit: ""
+        organization: "Default"
+        all_parents_must_converge: "False"
+        success_nodes:
+          - "Sync Project Fix"
+      - identifier: "Approval Fix"
+        workflow_job_template: "AWS AIOps: FIX & MITIGATION Workflow"
+        approval_node:
+          description: "Approve or not Fix"
+          name: "Approval Fix"
+          timeout: 300
+        limit: ""
+        organization: "Default"
+        all_parents_must_converge: "False"
+        success_nodes:
+          - "Run Fix"
+      - identifier: "Sync Project Fix"
+        workflow_job_template: "AWS AIOps: FIX & MITIGATION Workflow"
+        unified_job_template: "AWS AIOps Fix Project"
+        limit: ""
+        organization: "Default"
+        all_parents_must_converge: "False"
+        success_nodes:
+          - "Check Fix"
+      - identifier: "Check Fix"
+        workflow_job_template: "AWS AIOps: FIX & MITIGATION Workflow"
+        unified_job_template: "AWS AIOps: Check Fix"
+        limit: ""
+        organization: "Default"
+        all_parents_must_converge: "False"
+        always_nodes:
+          - "Approval Fix"
+      - identifier: "Run Fix"
+        workflow_job_template: "AWS AIOps: FIX & MITIGATION Workflow"
+        unified_job_template: "AWS AIOps: Run Fix"
+        limit: ""
+        organization: "Default"
+        all_parents_must_converge: "False"
+    ask_variables_on_launch: "True"
+    allow_simultaneous: "False"
+    scm_branch: ""
+    limit: ""
+    ask_limit_on_launch: false
+    ask_inventory_on_launch: false
+    webhook_service: ""
+    extra_vars: ""
+    survey_enabled: false
+...

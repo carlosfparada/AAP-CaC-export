@@ -1,0 +1,67 @@
+---
+controller_projects:
+  - name: "Demo Project"
+    organization: "Default"
+    scm_type: "git"
+    scm_url: "https://github.com/ansible/ansible-tower-samples"
+    scm_branch: ""
+    scm_clean: false
+    scm_delete_on_update: false
+    scm_update_on_launch: false
+    scm_update_cache_timeout: "0"
+    scm_refspec: ""
+    allow_override: false
+    update_project: false
+    timeout: "0"
+  - name: "Deploy Demos Project"
+    description: |-
+      {%- raw -%}
+      Deploy Demos Project
+      {%- endraw -%}
+    organization: "Default"
+    scm_type: "git"
+    scm_url: "https://github.com/carlosfparada/AAP-CaC.git"
+    scm_branch: ""
+    scm_clean: false
+    scm_delete_on_update: false
+    scm_update_on_launch: true
+    scm_update_cache_timeout: "0"
+    scm_refspec: ""
+    allow_override: false
+    update_project: false
+    timeout: "0"
+  - name: "AWS AIOps Project"
+    description: |-
+      {%- raw -%}
+      AWS AIOps Project
+      {%- endraw -%}
+    organization: "Default"
+    scm_type: "git"
+    scm_url: "https://github.com/carlosfparada/AWS-AIOps.git"
+    scm_branch: ""
+    scm_clean: false
+    scm_delete_on_update: false
+    scm_update_on_launch: true
+    scm_update_cache_timeout: "0"
+    scm_refspec: ""
+    allow_override: false
+    update_project: false
+    timeout: "0"
+  - name: "AWS AIOps Fix Project"
+    description: |-
+      {%- raw -%}
+      AWS AIOps Fix Project
+      {%- endraw -%}
+    organization: "Default"
+    scm_type: "git"
+    scm_url: "https://github.com/carlosfparada/AWS-AIOps-fixes.git"
+    scm_branch: ""
+    scm_clean: false
+    scm_delete_on_update: false
+    scm_update_on_launch: true
+    scm_update_cache_timeout: "0"
+    scm_refspec: ""
+    allow_override: false
+    update_project: false
+    timeout: "0"
+...
